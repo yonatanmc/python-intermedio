@@ -69,6 +69,13 @@ DATA = [
         'position': 'Language Maker',
         'language': 'python',
     },
+    {
+        'name': 'Yonatan',
+        'age': 31,
+        'organization': 'Python Organization',
+        'position': 'Language Maker',
+        'language': 'python',
+    },
 ]
 
 
