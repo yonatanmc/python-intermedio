@@ -88,7 +88,9 @@ DATA = [
 
 def run():
     #list with omprenhesion
+    #recupera los nombres de trabajadores que utilizan lenguaje Python
     all_python_devs = [worker["name"] for worker in DATA if worker["language"] == "python"]
+    #recupera lista nombres de trabajadores que son de la organización Tuinsti
     all_jobtuinsti = [jobs["name"] for jobs in DATA if jobs["organization"] == "Tuinsti"]
 
     for worker in all_python_devs:
@@ -97,8 +99,12 @@ def run():
         print(jobs)
 
 def runfiltro():
+    
+    #UTILIZANDO "FILTER" y "MAP"
+    #recupera los nombres de trabajadores que utilizan lenguaje Python
     trabajador_languaje = list(filter(lambda personas: personas["language"] == "python", DATA))
-    trabajador_languaje = list(map(lambda personas: personas["name"], trabajador_languaje))    
+    trabajador_languaje = list(map(lambda personas: personas["name"], trabajador_languaje)) 
+
     for i in trabajador_languaje:
         print(i)
     print(*trabajador_languaje)    
@@ -127,3 +133,9 @@ if __name__ == '__main__':
     #filtro()
     #runfiltro()
     comprehension2()
+
+# Filter: Recorre toda la lista para devolver uno varios elementos de esta. sirve para filtrar (devolver) elementos específicos en una lista.
+
+# Map: Recorre toda la lista, la modifica y devuelve la misma lista, pero modificada. Sirve parar realizar una operación a todos los elementos de la lista uno a uno y devolver la lista con sus valores modificados.
+
+# Reduce: no devuelve una lista, devuelve un valor haciendo una operación con todos los elementos. Sirve para hacer acumulaciones de los elementos de una lista.

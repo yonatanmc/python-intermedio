@@ -4,6 +4,7 @@ def run():
         my_dict[i] = i**3 """
     
     #my_dict = {i: i**3 for i in range(1, 101)}
+    #potencia de 2 para cada elemento de la lista utilizand list comprehension
     lista = [1, 2, 3, 4, 5]
     my_dict = [i**2 for i in lista]
 

@@ -1,4 +1,6 @@
-def operacion(x, mifuncion):
+
+#función de orden superior
+def operacion(x, mifuncion): #función principal
     return mifuncion(x)
 
 def raiz(x):
